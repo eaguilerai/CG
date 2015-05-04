@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>include/http_services/app_server.h</itemPath>
+      <itemPath>include/http_services/app_server_handler.h</itemPath>
+      <itemPath>include/http_services/app_server_options.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>source/http_services/app_server.cpp</itemPath>
+      <itemPath>source/http_services/app_server_handler.cpp</itemPath>
+      <itemPath>source/http_services/app_server_options.cpp</itemPath>
+      <itemPath>source/main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+      <logicalFolder name="f2"
+                     displayName="CppUnit Tests"
+                     projectFiles="true"
+                     kind="TEST">
+        <logicalFolder name="f1" displayName="http" projectFiles="true">
+          <itemPath>tests/app_server_test.cpp</itemPath>
+        </logicalFolder>
+        <itemPath>tests/runner.cpp</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <standard>8</standard>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>../../../../../../mingw/include/boost-1_57</pElem>
+            <pElem>../../../../../../OpenSSL-Win32/include</pElem>
+          </incDir>
+          <commandLine>`cppunit-config --cflags` -D_WIN32_WINNT=0x0801</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+          <linkerAddLib>
+            <pElem>../../../../../../OpenSSL-Win32/lib/MinGW</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibLibItem>cppunit</linkerLibLibItem>
+            <linkerLibLibItem>mockpp</linkerLibLibItem>
+            <linkerLibLibItem>cppnetlib-client-connections</linkerLibLibItem>
+            <linkerLibLibItem>cppnetlib-server-parsers</linkerLibLibItem>
+            <linkerLibLibItem>cppnetlib-uri</linkerLibLibItem>
+            <linkerLibLibItem>boost_system-mgw48-mt-s-1_57</linkerLibLibItem>
+            <linkerLibLibItem>boost_thread-mgw48-mt-s-1_57</linkerLibLibItem>
+            <linkerLibLibItem>ws2_32</linkerLibLibItem>
+            <linkerLibLibItem>wsock32</linkerLibLibItem>
+            <linkerLibLibItem>eay32</linkerLibLibItem>
+            <linkerLibLibItem>ssleay32</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <folder path="TestFiles/f2">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f2</output>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f2/f1">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+      </folder>
+      <item path="include/http_services/app_server.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/http_services/app_server_handler.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/http_services/app_server_options.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="source/http_services/app_server.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/http_services/app_server_handler.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/http_services/app_server_options.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/app_server_test.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/runner.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <folder path="TestFiles/f2">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f2</output>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f2/f1">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+      </folder>
+      <item path="include/http_services/app_server.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/http_services/app_server_handler.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/http_services/app_server_options.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="source/http_services/app_server.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/http_services/app_server_handler.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/http_services/app_server_options.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/app_server_test.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/runner.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
