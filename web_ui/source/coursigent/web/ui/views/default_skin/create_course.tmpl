@@ -1,0 +1,37 @@
+<% c++ /// \file create_course.cpp %>
+<% c++ /// \brief Contains the definition of the Create_course view class of %>
+<% c++ /// the classic skin. %>
+<% c++ /// \author Erasmo Aguilera <eaguilerai@hotmail.com> %>
+<% c++ /// \date May 6, 2015, 11:03 a.m. %>
+
+<% c++ #include "coursigent/web/ui/models/teacher.h" %>
+
+<% c++ namespace coursigent { %>
+<% c++ namespace web { %>
+<% c++ namespace ui { %>
+<% c++ namespace views { %>
+
+<% skin default_skin %>
+<% view Create_course uses coursigent::web::ui::models::Teacher %>
+<% template render() %>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Teacher registration - Coursigent</title>
+    </head>
+    <body>
+        <form>
+            
+        </form>
+    </body>
+</html>
+<% end template %>
+<% end view %>
+<% end skin %>
+
+<% c++ } // end of namespace views %>
+<% c++ } // end of namespace ui %>
+<% c++ } // end of namespace web %>
+<% c++ } // end of namespace coursigent %>
+
+<% c++ using namespace coursigent::web::ui::views; %>

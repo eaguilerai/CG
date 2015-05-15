@@ -4,6 +4,26 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="Coursigent" projectFiles="true">
+        <logicalFolder name="f1" displayName="Testing" projectFiles="true">
+        </logicalFolder>
+        <logicalFolder name="f2" displayName="Web" projectFiles="true">
+          <logicalFolder name="f1" displayName="HTML" projectFiles="true">
+          </logicalFolder>
+          <logicalFolder name="f2" displayName="UI" projectFiles="true">
+            <logicalFolder name="f1" displayName="Models" projectFiles="true">
+              <itemPath>include/coursigent/web/ui/models/teacher.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="Views" projectFiles="true">
+              <itemPath>tests/coursigent/web/ui/views/default_skin_test.h</itemPath>
+            </logicalFolder>
+            <itemPath>include/coursigent/web/ui/application.h</itemPath>
+          </logicalFolder>
+          <itemPath>include/coursigent/web/html.h</itemPath>
+          <itemPath>tests/coursigent/web/html_test.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <itemPath>include/coursigent/web/html/document.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -12,11 +32,73 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="Coursigent" projectFiles="true">
+        <logicalFolder name="f3" displayName="Web" projectFiles="true">
+          <logicalFolder name="f3" displayName="UI" projectFiles="true">
+            <logicalFolder name="f1" displayName="Models" projectFiles="true">
+              <itemPath>source/coursigent/web/ui/models/teacher.cpp</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="Views" projectFiles="true">
+              <logicalFolder name="f1" displayName="Default Skin" projectFiles="true">
+                <itemPath>source/coursigent/web/ui/views/default_skin/create_course.tmpl</itemPath>
+                <itemPath>source/coursigent/web/ui/views/default_skin/register_teacher.tmpl</itemPath>
+              </logicalFolder>
+              <itemPath>source/coursigent/web/ui/views/default_skin.cpp</itemPath>
+            </logicalFolder>
+            <itemPath>source/coursigent/web/ui/application.cpp</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
+      <itemPath>source/coursigent/web/html/document.cpp</itemPath>
+      <itemPath>source/main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
                    projectFiles="false"
                    kind="TEST_LOGICAL_FOLDER">
+      <logicalFolder name="f2"
+                     displayName="Coursigent"
+                     projectFiles="true"
+                     kind="TEST_LOGICAL_FOLDER">
+        <logicalFolder name="f2"
+                       displayName="Web"
+                       projectFiles="true"
+                       kind="TEST_LOGICAL_FOLDER">
+          <logicalFolder name="f2"
+                         displayName="HTML"
+                         projectFiles="true"
+                         kind="TEST_LOGICAL_FOLDER">
+            <logicalFolder name="f1" displayName="Document" projectFiles="true" kind="TEST">
+              <itemPath>tests/coursigent/web/html/document_runner.cpp</itemPath>
+              <itemPath>tests/coursigent/web/html/document_test.cpp</itemPath>
+              <itemPath>tests/coursigent/web/html/document_test.h</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f1"
+                         displayName="UI"
+                         projectFiles="true"
+                         kind="TEST_LOGICAL_FOLDER">
+            <logicalFolder name="f1"
+                           displayName="Views"
+                           projectFiles="true"
+                           kind="TEST_LOGICAL_FOLDER">
+              <logicalFolder name="f1"
+                             displayName="Default Skin"
+                             projectFiles="true"
+                             kind="TEST_LOGICAL_FOLDER">
+                <logicalFolder name="f1"
+                               displayName="Register Teacher Test"
+                               projectFiles="true"
+                               kind="TEST">
+                  <itemPath>tests/coursigent/web/ui/views/default_skin/register_teacher_runner.cpp</itemPath>
+                  <itemPath>tests/coursigent/web/ui/views/default_skin/register_teacher_test.cpp</itemPath>
+                  <itemPath>tests/coursigent/web/ui/views/default_skin/register_teacher_test.h</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -24,6 +106,8 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>Makefile</itemPath>
+    <itemPath>etc/config.json</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -34,7 +118,232 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <standard>8</standard>
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>../utility/include</pElem>
+            <pElem>../../../../../../mingw/msys/1.0/opt/windows_64/include</pElem>
+            <pElem>../../../../../../mingw/msys/1.0/opt/windows_64/include/libxml++-2.6</pElem>
+            <pElem>../../../../../../mingw/msys/1.0/opt/windows_64/lib64/libxml++-2.6/include</pElem>
+            <pElem>../../../../../../mingw/msys/1.0/opt/windows_64/include/libxml2</pElem>
+            <pElem>../../../../../../mingw/msys/1.0/opt/windows_64/include/glibmm-2.4</pElem>
+            <pElem>../../../../../../mingw/msys/1.0/opt/windows_64/lib64/glibmm-2.4/include</pElem>
+            <pElem>../../../../../../mingw/msys/1.0/opt/windows_64/include/glib-2.0</pElem>
+            <pElem>../../../../../../mingw/msys/1.0/opt/windows_64/lib64/glib-2.0/include</pElem>
+            <pElem>source/coursigent/web/ui/views</pElem>
+          </incDir>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+          <warningLevel>0</warningLevel>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f3</output>
+          <linkerLibItems>
+            <linkerLibLibItem>cppcms.dll</linkerLibLibItem>
+            <linkerLibLibItem>booster.dll</linkerLibLibItem>
+            <linkerLibLibItem>gumbo_xml.dll</linkerLibLibItem>
+            <linkerLibLibItem>gumbo.dll</linkerLibLibItem>
+            <linkerLibLibItem>xml++-2.6.dll</linkerLibLibItem>
+            <linkerLibLibItem>glibmm-2.4.dll</linkerLibLibItem>
+            <linkerLibLibItem>glib-2.0.dll</linkerLibLibItem>
+            <linkerLibLibItem>xml2.dll</linkerLibLibItem>
+            <linkerLibLibItem>cppunit.dll</linkerLibLibItem>
+            <linkerLibLibItem>mockpp.dll</linkerLibLibItem>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+          <commandLine>-LC:/mingw/msys/1.0/opt/windows_64/lib64</commandLine>
+        </linkerTool>
+        <requiredProjects>
+          <makeArtifact PL="../utility"
+                        CT="3"
+                        CN="Debug"
+                        AC="true"
+                        BL="false"
+                        WD="../utility"
+                        BC="${MAKE}  -f Makefile CONF=Debug"
+                        CC="${MAKE}  -f Makefile CONF=Debug clean"
+                        OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libutility.a">
+          </makeArtifact>
+        </requiredProjects>
       </compileType>
+      <item path="Makefile" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="etc/config.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <folder path="SourceFiles/f1/f3/f3/f2">
+        <ccTool>
+          <incDir>
+            <pElem>source/coursigent/web/ui/views</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="TestFiles">
+        <ccTool>
+          <incDir>
+            <pElem>tests</pElem>
+          </incDir>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>../../../../../../mingw/msys/1.0/opt/windows_64/lib64</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f2">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f2</output>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f2/f2/f1/f1">
+        <ccTool>
+          <incDir>
+            <pElem>source/coursigent/web/ui/views</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="TestFiles/f2/f2/f1/f1/f1/f1">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f2/f2/f1/f1/f1/f1</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f2/f2/f2/f1">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f2/f2/f2/f1</output>
+        </linkerTool>
+      </folder>
+      <item path="include/coursigent/web/html.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/coursigent/web/html/document.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/coursigent/web/ui/application.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/coursigent/web/ui/models/teacher.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="source/coursigent/web/html/document.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/coursigent/web/ui/application.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/coursigent/web/ui/models/teacher.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/coursigent/web/ui/views/default_skin.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/coursigent/web/ui/views/default_skin/create_course.tmpl"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="source/coursigent/web/ui/views/default_skin/register_teacher.tmpl"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="source/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/coursigent/web/html/document_runner.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="tests/coursigent/web/html/document_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="tests/coursigent/web/html/document_test.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="tests/coursigent/web/html_test.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/coursigent/web/ui/views/default_skin/register_teacher_runner.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="tests/coursigent/web/ui/views/default_skin/register_teacher_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="tests/coursigent/web/ui/views/default_skin/register_teacher_test.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="tests/coursigent/web/ui/views/default_skin_test.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
     </conf>
     <conf name="Release" type="1">
       <toolsSet>
@@ -45,9 +354,17 @@
       <compileType>
         <cTool>
           <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+          <commandLine>`cppunit-config --cflags`</commandLine>
         </cTool>
         <ccTool>
           <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+          <commandLine>`cppunit-config --cflags`</commandLine>
         </ccTool>
         <fortranCompilerTool>
           <developmentMode>5</developmentMode>
@@ -55,7 +372,152 @@
         <asmTool>
           <developmentMode>5</developmentMode>
         </asmTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f3</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
+      <item path="Makefile" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="etc/config.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <folder path="TestFiles/f2">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f2</output>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f2/f2/f1/f1/f1/f1">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f2/f2/f1/f1/f1/f1</output>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f2/f2/f2/f1">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f2/f2/f2/f1</output>
+        </linkerTool>
+      </folder>
+      <item path="include/coursigent/web/html.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/coursigent/web/html/document.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/coursigent/web/ui/application.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/coursigent/web/ui/models/teacher.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="source/coursigent/web/html/document.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/coursigent/web/ui/application.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/coursigent/web/ui/models/teacher.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/coursigent/web/ui/views/default_skin.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/coursigent/web/ui/views/default_skin/create_course.tmpl"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="source/coursigent/web/ui/views/default_skin/register_teacher.tmpl"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="source/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/coursigent/web/html/document_runner.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="tests/coursigent/web/html/document_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="tests/coursigent/web/html/document_test.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="tests/coursigent/web/html_test.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/coursigent/web/ui/views/default_skin/register_teacher_runner.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="tests/coursigent/web/ui/views/default_skin/register_teacher_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="tests/coursigent/web/ui/views/default_skin/register_teacher_test.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="tests/coursigent/web/ui/views/default_skin_test.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
     </conf>
   </confs>
 </configurationDescriptor>

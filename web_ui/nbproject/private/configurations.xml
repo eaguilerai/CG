@@ -25,9 +25,13 @@
       <runprofile version="9">
         <runcommandpicklist>
           <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -c C:\Users\Erasmo\Documents\NetBeansProjects\Coursigent\web_ui\etc\config.json</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -c config.json</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -c etc/config.json</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -c etc\config.json</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}"</runcommand>
-        <rundir></rundir>
+        <runcommand>"${OUTPUT_PATH}" -c etc\config.json</runcommand>
+        <rundir>C:\Users\Erasmo\Documents\NetBeansProjects\Coursigent\web_ui\.</rundir>
         <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>
         <remove-instrumentation>0</remove-instrumentation>

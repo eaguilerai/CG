@@ -6,15 +6,6 @@
     </data>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/Erasmo/Documents/NetBeansProjects/Coursigent/http_services/include/http_services/app_server_options.h</file>
-            <file>file:/C:/Users/Erasmo/Documents/NetBeansProjects/Coursigent/http_services/include/http_services/app_server.h</file>
-            <file>file:/C:/Users/Erasmo/Documents/NetBeansProjects/Coursigent/http_services/source/http_services/app_server_options.cpp</file>
-            <file>file:/C:/Users/Erasmo/Documents/NetBeansProjects/Coursigent/http_services/tests/app_server_test.cpp</file>
-            <file>file:/C:/Users/Erasmo/Documents/NetBeansProjects/Coursigent/http_services/source/http_services/app_server.cpp</file>
-            <file>file:/C:/Users/Erasmo/Documents/NetBeansProjects/Coursigent/http_services/include/http_services/app_server_handler.h</file>
-            <file>file:/C:/Users/Erasmo/Documents/NetBeansProjects/Coursigent/http_services/source/http_services/app_server_handler.cpp</file>
-            <file>file:/C:/Users/Erasmo/Documents/NetBeansProjects/Coursigent/http_services/source/main.cpp</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

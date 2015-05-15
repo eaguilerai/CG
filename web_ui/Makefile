@@ -53,8 +53,20 @@ CCADMIN=CCadmin
 # build
 build: .build-post
 
-.build-pre:
+.build-pre: .build-default_skin-skin
 # Add your pre 'build' code here...
+
+PYTHON=C:/Python27/python.exe
+CPPCMS_TMPL_CC=C:/mingw/msys/1.0/opt/windows_64/bin/cppcms_tmpl_cc
+SKIN_DIR=./source/coursigent/web/ui/views
+DEFAULT_SKIN_DIR=$(SKIN_DIR)/default_skin
+
+.build-default_skin-skin: \
+$(DEFAULT_SKIN_DIR)/register_teacher.tmpl \
+$(DEFAULT_SKIN_DIR)/create_course.tmpl
+	$(PYTHON) $(CPPCMS_TMPL_CC) -o $(SKIN_DIR)/default_skin.cpp \
+	    $(DEFAULT_SKIN_DIR)/register_teacher.tmpl \
+	    $(DEFAULT_SKIN_DIR)/create_course.tmpl 
 
 .build-post: .build-impl
 # Add your post 'build' code here...
